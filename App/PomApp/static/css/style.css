@@ -1,0 +1,33 @@
+html,
+body {
+	margin: 10;
+	padding: 10;
+}
+
+#page-wrap {
+	text-align: left;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+body {
+
+	font:'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	text-align: center;
+	color: #4d4d4d;
+	min-width: 230px;
+	max-width: 550px;
+	margin: 0 auto;
+	font-weight: 400;
+}
+
+table {
+	border-spacing: 10px;
+	border-collapse: separate;
+	width: 400px;
+}
+/*td {
+	padding-right: 10px;
+
+}*/
