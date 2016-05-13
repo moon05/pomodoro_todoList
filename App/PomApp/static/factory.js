@@ -5,7 +5,7 @@ pom.factory('ModelUtils', function($http, $log) {
 
 		get: function () {
 
-			return $http.get('/api/todos/')
+			return $http.get('api/todos/')
 				.then(function (response){
 					angular.copy(response.data, ModelUtils.todos);
 					return ModelUtils.todos;
@@ -15,7 +15,7 @@ pom.factory('ModelUtils', function($http, $log) {
 
 		create: function (todo) {
 			var originalTodos = ModelUtils.todos.slice(0);
-			return $http.post('/api/todo/', todo)
+			return $http.post('api/todo/', todo)
 				.then(function success(response){
 					todo.id = response.data.id;
 					ModelUtils.todos.push(todo);
@@ -29,7 +29,7 @@ pom.factory('ModelUtils', function($http, $log) {
 		put: function (todo) {
 			var originalTodos = ModelUtils.todos.slice(0);
 
-			return $http.put('/api/todo/' + todo.pk, todo)
+			return $http.put('api/todo/' + todo.pk, todo)
 				.then(function success() {
 					return ModelUtils.todos;
 				}, function error() {
@@ -44,7 +44,7 @@ pom.factory('ModelUtils', function($http, $log) {
 
 			ModelUtils.todos.splice(ModelUtils.todos.indexOf(todo),1);
 			console.log(todo)
-			return $http.delete('/api/todo/'+todo.pk)
+			return $http.delete('api/todo/'+todo.pk)
 				.then(function success() {
 					return ModelUtils.todos;
 				}, function error() {
