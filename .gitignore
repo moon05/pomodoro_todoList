@@ -1,4 +1,8 @@
 *.pyc
 *.log
 *.tmp
+*.db
 .DS_Store
+
+
+!.gitignore
