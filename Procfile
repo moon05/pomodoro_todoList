@@ -1,1 +1,1 @@
-web: python App/manage.py migrate
+web: python App/manage.py runserver 0.0.0.0:$PORT --noreload
