@@ -1,1 +1,1 @@
-web: python App/manage.py makemigrations
+web: python App/manage.py migrate
